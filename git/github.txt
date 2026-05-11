@@ -1,0 +1,27 @@
+git init                    # Initialize Git in project folder
+
+git add .                   # Add all project files to staging area
+
+git commit -m "First commit" # Save project snapshot with message
+
+git branch -M main          # Rename current branch to main
+
+git remote add origin https://github.com/USERNAME/REPOSITORY.git
+# Connect local project to GitHub repository
+
+git push -u origin main     # Upload project to GitHub
+
+If remote already exists:
+
+git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+# Change existing GitHub repository link
+
+Useful commands:
+
+git status                  # Show changed files status
+
+git remote -v               # Show connected GitHub repository link
+
+git pull origin main        # Download latest project from GitHub
+
+git push                    # Upload latest changes to GitHub
