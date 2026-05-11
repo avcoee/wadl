@@ -1,0 +1,36 @@
+# CHECK DOCKER
+docker --version
+docker info
+
+# PULL JAVA IMAGE
+docker pull eclipse-temurin:17
+
+# CREATE & START CONTAINER WITH JSHELL
+docker run -it --name JAVA eclipse-temurin:17 jshell
+
+# INSIDE JSHELL - try these
+System.out.println("Hello Docker");
+int a = 10;
+System.out.println(a);
+/exit
+
+# CONTAINER MANAGEMENT
+docker ps -a
+docker start JAVA
+docker stop JAVA
+docker restart JAVA
+
+# ACCESS CONTAINER
+docker exec -it JAVA jshell
+docker exec -it JAVA bash
+
+# INSPECT & MONITOR
+docker logs JAVA
+docker stats
+docker top JAVA
+
+# CLEANUP
+docker stop JAVA
+docker rm JAVA
+docker rmi eclipse-temurin:17
+docker system prune
