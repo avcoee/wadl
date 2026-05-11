@@ -1,0 +1,66 @@
+# CHECK GIT
+git --version
+
+# CONFIGURE GIT (first time setup)
+git config --global user.name "YourName"
+git config --global user.email "youremail@gmail.com"
+git config --list
+
+# CREATE LOCAL REPO
+mkdir myproject
+cd myproject
+git init
+
+# CHECK STATUS
+git status
+
+# ADD FILES
+git add .                        # add all files
+
+# COMMIT
+git commit -m "first commit"
+
+# RENAME BRANCH
+git branch -M main
+
+# CONNECT TO GITHUB REMOTE
+git remote add origin https://github.com/username/reponame.git
+git remote -v                    # verify remote
+
+# PUSH TO GITHUB
+git push -u origin main
+git push                         # after first push
+
+# CLONE EXISTING REPO
+git clone https://github.com/username/reponame.git
+
+# PULL LATEST CHANGES
+git pull origin main
+
+
+
+# BRANCHING
+git branch                       # list branches
+git branch dev                   # create branch
+git checkout dev                 # switch branch
+git checkout -b feature          # create + switch
+git merge dev                    # merge into current
+git branch -d dev                # delete branch
+
+# LOG & HISTORY
+git log
+git log --oneline
+git diff
+
+# UNDO / RESET
+git restore filename             # discard changes
+git reset HEAD filename          # unstage file
+git reset --hard HEAD            # reset everything
+
+# STASH (save work temporarily)
+git stash
+git stash pop
+
+# TAGS
+git tag v1.0
+git push origin v1.0
