@@ -1,0 +1,25 @@
+node -v                                          
+# Check Node.js version
+
+npm -v                                           
+# Check npm version
+
+npm install -g @angular/cli                      
+# Install Angular CLI globally
+
+ng new angular-app                               
+# Create new Angular project (select Yes for routing, CSS for stylesheet)
+
+cd angular-app                                   
+# Move inside the project folder
+
+1. Open VS Code
+2. File → Open Folder
+3. Select your angular-app folder
+4. Drag and drop your code files into the src/app/ folder in VS Code Explorer
+
+npm install                                      
+# Install all dependencies from package.json
+
+ng serve                                         
+# Run project at http://localhost:4200
