@@ -1,0 +1,33 @@
+import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [FormsModule],
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+})
+
+export class App {
+
+  title = signal('Registration Form');
+
+  displayname = '';
+  displaycontact = '';
+  displayemail = '';
+  displaypassword = '';
+
+  getValue(
+    name: string,
+    contact: string,
+    email: string,
+    password: string
+  ) {
+
+    this.displayname = name;
+    this.displaycontact = contact;
+    this.displayemail = email;
+    this.displaypassword = password;
+  }
+}
