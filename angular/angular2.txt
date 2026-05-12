@@ -1,0 +1,31 @@
+# create the app.html in src then paste the code that
+<h1>{{title()}}</h1>
+
+    <input type="text"
+    [(ngModel)]="displayname"
+    placeholder="Enter Name">
+
+    <input type="text"
+    [(ngModel)]="displaycontact"
+    placeholder="Enter Contact">
+
+    <input type="email"
+    [(ngModel)]="displayemail"
+    placeholder="Enter Email">
+
+    <input type="password"
+    [(ngModel)]="displaypassword"
+    placeholder="Enter Password">
+
+    <button
+    (click)="getValue(displayname,displaycontact,displayemail,displaypassword)">
+    Register
+    </button>
+
+    <h3>Name : {{displayname}}</h3>
+
+    <h3>Contact : {{displaycontact}}</h3>
+
+    <h3>Email : {{displayemail}}</h3>
+
+</div>
